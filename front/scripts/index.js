@@ -1,13 +1,19 @@
-// Selección del contenedor principal
+//* URL de la api
+const URL = 'https://students-api.up.railway.app/movies'
+
+//* Selección del contenedor principal
 let container = document.getElementById('container');
 
-// Iteración de los elementos
-tempData.forEach(item => {
+//* JQUERY
 
-    // Creación del contenedor de las tarjetas
+$.get(URL, (response) => {
+    //* Iteración de los elementos
+    response.forEach(item => {
+
+    //* Creación del contenedor de las tarjetas
     const card = document.createElement('div');
 
-    // Creación de elementos para agregar a la card
+    //* Creación de elementos para agregar a la card
     const e_title = document.createElement('h2');
     const e_year = document.createElement('p');
     const e_director = document.createElement('p');
@@ -16,7 +22,7 @@ tempData.forEach(item => {
     const e_rate = document.createElement('p');
     const e_poster = document.createElement('img');
 
-    // Asignación de los valores a cada elemento de la card
+    //* Asignación de los valores a cada elemento de la card
     e_title.textContent = item.title;
     e_year.textContent = item.year;
     e_director.textContent = item.director;
@@ -25,7 +31,7 @@ tempData.forEach(item => {
     e_rate.textContent = item.rate;
     e_poster.src = item.poster;
 
-    //Asignación de cada item a los elementos de la card
+    //* Asignación de cada item a los elementos de la card
     card.append(
         e_title,
         e_year,
@@ -36,8 +42,12 @@ tempData.forEach(item => {
         e_poster
     );
 
-    //Asignacion de la card al contenedor creado
+    //* Asignación de la card al contenedor creado
     container.appendChild(card);
 });
+});
+
+
+
 
 
