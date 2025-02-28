@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/reset.css" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="../styles/media.css">
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -27,7 +27,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <title>Our-Movies</title>
+    <title>About-Me</title>
   </head>
   <body class="bg-light" style="padding-top: 7rem;">
     <header>
@@ -37,13 +37,13 @@
       <a
         class="navbar-brand font-weight-bold font-italic"
         style="transition: 0.5s"
-        href="index.html"
+        href="../index.html"
       >
         <img
           width="30"
           height="30"
           class="d-inline-block align-top"
-          src="assets/img/Logo.png"
+          src="../assets/img/Logo.png"
           alt="logo"
         />
         Our-Movies
@@ -65,7 +65,7 @@
             <li class="nav-item active">
               <a
                 class="nav-link font-weight-bold text-white"
-                href="index.html"
+                href="../index.html"
                 style="transition: 0.5s"
                 >Inicio</a
               >
@@ -73,7 +73,7 @@
             <li class="nav-item">
               <a
                 class="nav-link font-weight-bold text-white"
-                href="pages/history.html"
+                href="history.html"
                 style="transition: 0.5s"
                 >History of Cinema</a
               >
@@ -81,7 +81,7 @@
             <li class="nav-item">
               <a
                 class="nav-link font-weight-bold text-white"
-                href="pages/about.html"
+                href="about.html"
                 style="transition: 0.5s"
                 >About-Me</a
               >
@@ -90,28 +90,38 @@
         </div>
       </nav>
     </header>
-    <main class="container-fluid">
+    <main>
       <section>
-        <div
-          class="container border-top border-bottom border-secondary rounded shadow bg-white my-2 py-5"
-        >
-          <h1 class="text-center">Top Movies</h1>
+        <div class="container border-top border-bottom border-secondary rounded  shadow bg-white my-2 py-5">
+          <h1 class="text-center">Agregar Peliculas</h1>
         </div>
-        <div
-          class="container border-top border-bottom border-secondary rounded shadow bg-white my-5 p-5"
-        >
-          <div
-            class="container d-flex justify-content-between flex-wrap"
-            id="card-deck"
-          ></div>
+      </section>
+      <section>
+        <div class="container border-top border-bottom border-secondary rounded shadow bg-white my-5 p-5">
+          <h2 class="text-center border-bottom pb-2">Nueva Pelicula</h2>
+          <div class="d-flex flex-row align-items-center">
+            <form action="http://localhost:3000/movies" method="post" id="form">
+                <label for="tile">Titulo:</label>
+                <input type="text" id="title" name="title">
+                <label for="year">Año:</label>
+                <input type="text" id="year" name="year">
+                <label for="director">Director:</label>
+                <input type="text" id="director" name="director">
+                <label for="duration">Duración:</label>
+                <input type="text" id="duration" name="duration">
+                <label for="genre">Género:</label>
+                <input type="text" id="genre" name="genre">
+                <label for="rate">Puntuación:</label>
+                <input type="text" id="rate" name="rate">
+                <label for="poster">Imagen:</label>
+                <input type="text" id="poster" name="poster">
+                <button type="submit">Agregar</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
-    <footer class="container-fluid bg-dark p-1">
-      <p class="text-center text-white pt-3">
-        @Diego-Cepeda - All rigths reserved - 2024
-      </p>
-    </footer>
-    <script src="./public/bundle.js"></script>
+    <footer class="container-fluid bg-dark p-1"><p class="text-center text-white pt-3">@Diego-Cepeda - All rigths reserved - 2024</p></footer>
+    <script src="../scripts/addMovies.js"></script>
   </body>
 </html>

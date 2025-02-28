@@ -1,63 +1,45 @@
-/* Reset CSS */
+/* reset.css */
+
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
 }
 
 body {
-  line-height: 1.5;
-  background-color: #fff;
+    font-family: Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  font-weight: normal;
+html {
+    font-size: 100%;
 }
 
 ul, ol {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+    list-style: none;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-table {
-  border-collapse: collapse;
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
 }
 
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
+p {
+    margin: 0;
+    padding: 0;
 }
 
-input, select, textarea {
-  border: none;
-  outline: none;
-  font: inherit;
-  color: inherit;
-}
-
-blockquote {
-  margin: 0;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid #ccc;
+a {
+    text-decoration: none;
+    color: inherit;
 }
